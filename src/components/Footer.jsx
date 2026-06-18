@@ -17,7 +17,7 @@ const Footer = () => {
         <li><a href="#contact">Kontak</a></li>
       </ul>
       <p className="copyright">
-        © DuhXcode | Hak Cipta Dilindungi Undang-Undang
+        © Muhammad Abduh | Portofolio
       </p>
     </footer>
   );
