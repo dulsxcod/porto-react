@@ -586,54 +586,137 @@ span{
     padding: 2rem 3%;
   }
 }
-@media(max-width:895px){
-  #menu-icon{
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVE WEB DESIGN)
+   ========================================================================== */
+
+@media (max-width: 1285px) {
+  html {
+    font-size: 55%;
+  }
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem 7rem;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 5%;
+  }
+  section {
+    padding: 10rem 5% 5rem; /* Mengurangi padding luar agar konten tidak terjepit */
+  }
+  .heading {
+    font-size: 5rem; /* Mengecilkan judul utama section di HP */
+    margin: 3rem 0;
+  }
+  .timeline-items::before {
+    left: 7px;
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+  .timeline-dot {
+    left: 0;
+  }
+  .timeline-content {
+    padding: 20px 25px; /* Memperkecil padding box timeline di HP */
+  }
+  .services-container {
+    grid-template-columns: 1fr; /* Menjadikan 1 kolom di HP */
+  }
+  .services-box {
+    height: auto; /* Mengubah dari 300px ke auto agar teks deskripsi tidak meluap keluar box */
+  }
+  .services-box .services-info {
+    padding: 3rem 2.5rem; /* Merapikan padding box proyek */
+    max-height: none;
+  }
+  .contact form {
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem auto;
+  }
+  .contact form .input-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 895px) {
+  #menu-icon {
     display: block;
   }
-  .navbar{
+  .navbar {
     position: absolute;
     top: 100%;
     right: 0;
     width: 50%;
     padding: 1rem 3%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.95); /* Mempergelap background menu drop-down */
     backdrop-filter: blur(20px);
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
     display: none;
   }
-  .navbar.active{
+  .navbar.active {
     display: block;
   }
-  .navbar a{
+  .navbar a {
     display: block;
     font-size: 2rem;
-    margin: 3rem 0;
+    margin: 2.5rem 0;
     color: white;
   }
-  .home{
-    flex-direction: column-reverse;
-    margin: 5rem 4rem;
+  .home {
+    flex-direction: column-reverse; /* Mengatur foto profil berada di atas teks saat di HP */
+    gap: 3rem;
+    margin: 3rem 0;
+    text-align: center;
   }
-  .home-content h3{
-    font-size: 2.6rem;
+  .home-content {
+    align-items: center; /* Meratakan teks beranda ke tengah di HP */
+    text-align: center;
   }
-  .home-content h1{
-    font-size: 8rem;
-    margin-top: 3rem;
+  .home-content h1 {
+    font-size: 4.5rem; /* Mengecilkan ukuran nama kamu agar tidak patah berantakan */
+    text-align: center;
   }
-  .home-content p{
-    max-width: 600px;
+  .home-content h3 {
+    font-size: 2.2rem;
+  }
+  .home-img img {
+    width: 60vw; /* Ukuran foto profil yang lebih proporsional di HP */
     margin: 0 auto;
   }
-  .home-img img{
-    width: 56vw;
+  .social-icons a {
+    margin: 2rem 1rem; /* Mengatur jarak ikon sosmed di mobile */
   }
-  .services h2{
-    margin-bottom: 3rem;
+}
+
+/* Tambahan optimasi khusus untuk layar HP yang sangat kecil (Smarphone portrait) */
+@media (max-width: 480px) {
+  html {
+    font-size: 50%; /* Menurunkan skala dasar font sedikit lagi */
   }
-  .services-container{
-    grid-template-columns: repeat(1,1fr);
+  .home-content h1 {
+    font-size: 3.8rem;
+  }
+  .heading {
+    font-size: 4rem;
+  }
+  .btn-group {
+    flex-direction: column; /* Membuat tombol "Hubungi Saya" & "Lihat Karya" bersusun ke bawah */
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
